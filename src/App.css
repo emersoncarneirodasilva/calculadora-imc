@@ -1,38 +1,144 @@
-.App {
-  text-align: center;
+.app-int {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 600px;
+    height: 600px;
+    background-color: rgb(216, 226, 226); 
+    border-radius: 6px;   
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.app {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    height: 100vh;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+h1 {
+    font-size: 50px;
+    margin-top: 20%;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+span {
+    margin: 12px 0;
 }
 
-.App-link {
-  color: #61dafb;
+.area-input {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 500px;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.area-input input {
+    width: 100%;
+    height: 46px;
+    margin-bottom: 12px;
+    padding: 0 12px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #121212;
+    color: #fff;
+    text-align: center;
+    font-size: 18px;
+}
+
+.area-input button {
+    width: 100%;
+    height: 46px;
+    border: 0;
+    border-radius: 6px;
+    background-color: #0b50db;
+    color: #fff;
+    font-size: 18px;
+}
+
+.area-input button:hover {
+    background-color: #357AFF;
+}
+
+h2 {
+    margin-top: 28px;
+}
+
+/* Retirar as cetas (scroll) dos inputs number */
+input[type="number"]::-webkit-outer-spin-button,
+input[type="number"]::-webkit-inner-spin-button {
+    -webkit-appearance: none;
+    margin: 0;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+@media (max-width: 550px) {
+    .app-int {
+        width: 500px;
+        height: 500px;  
+    }
+
+    .area-input {
+        width: 400px;
+    }
+
+    h2 {
+        width: 400px;
+    }
+}
+
+@media (max-width: 510px) {
+    .app-int {
+        width: 500px;
+        height: 500px;  
+    }
+
+    .area-input {
+        width: 400px;
+    }
+
+    h2 {
+        width: 400px;
+    }
+}
+
+@media (max-width: 410px) {
+    .app-int {
+        width: 400px;
+        height: 550px;  
+    }
+
+    .area-input {
+        width: 300px;
+    }
+
+    h1, h2 {
+        width: 300px;
+    }
+}
+
+@media (max-width: 310px) {
+    .app-int {
+        width: 350px;
+        height: 500px;  
+    }
+
+    .area-input {
+        width: 250px;
+    }
+
+    h1 {
+        width: 250px;
+        font-size: 40px;
+    }
+
+    h2 {
+        width: 250px;
+        font-size: 22px;
+        text-align: justify;
+    }
 }
